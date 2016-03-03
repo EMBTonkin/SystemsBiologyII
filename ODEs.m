@@ -116,12 +116,12 @@ k_b=p(81);
 
 
 
-if t<0
+if t<150
   switz=0;
   beta1=zeros(ncell,1);
   S_GABA=0.1*ones(ncell,1);
 else 
-    switz=5;
+    switz=1;
     %%%%% VIP calcs %%%%%%%%%%%%%
     VIP=vVIP';
     VIP=VIP(ones(1,ncell),:);
