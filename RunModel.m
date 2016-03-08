@@ -1,3 +1,4 @@
+clear all
  xaa=0
  for w=1:length(xaa)
 for ii=1:1
