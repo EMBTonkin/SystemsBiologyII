@@ -1,9 +1,12 @@
 function dydt= ODEs(t,y,p,xa,ba,A,sumal,A1,sumalGABA,ncell,ns,vsP0,vsB,vmB,Cl_o,vvip,t1)
 dydt=zeros(ns*ncell,1);
 
+%these equations and parameters come from the supporting material of the
+%Vasalou Herzog and Henson Paper
+
 i=1:ncell;
-Ca=y((i-1)*ns+1);
-Ca_store =  y((i-1)*ns+2);
+Ca=y((i-1)*ns+1); %cytosolic calcium concentration
+Ca_store =  y((i-1)*ns+2); %calcium concentration within the ryanodine pool
 MP = y((i-1)*ns+3);
 MC = y((i-1)*ns+4);
 MB = y((i-1)*ns+5);
@@ -116,7 +119,7 @@ k_b=p(81);
 
 
 
-if t<150 % cells ignoring eachothter
+if t<150
   switz=0;
   beta1=zeros(ncell,1);
   S_GABA=0.1*ones(ncell,1);

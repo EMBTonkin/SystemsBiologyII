@@ -13,6 +13,7 @@ ns = 21;%# of states
 % load vsB
 % load vsP0
 %%%%%%%% Create Heterogeneity %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Kingsbury, Taylor, Henson, pg 2, 1.2. Network Heterogeneity
  sd = 0.01;
 vsP0 =0.94+sqrt((0.94*sd*6)^2)*randn(ncell,1);
 vsB = (1.0*ones(ncell,1))+ sqrt((1.0*sd*1)^2)*randn(ncell,1);
